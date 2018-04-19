@@ -1,15 +1,19 @@
+function createPost() {
+  var main = document.getElementsByTagName("main")[0];
+  var pageTemplate = _.template(document.getElementById("page-template").innerHTML);
+  var postTemplate = _.template(document.getElementById("post-template").innerHTML);
+  // // var authorName = document.getElementById("author-name").value;
+  // // var articleTitle = document.getElementById("article-title").value;
+  // // var articleBody = document.getElementById("article-body").value;
+  // var post = postTemplate({title: articleTitle, text: articleBody, author: authorName});
+  // var page = pageTemplate({post: post, comments: document.getElementById("comments-template").innerHTML});
+  // main.innerHTML = page;
+}
+
 function postComment() {
-  var commenter = document.getElementById("commenterName").value;
-  var comment = document.getElementById("commentText").value;
-  //insert comment into "comments" div in this format:
-  //<div class="comment"><p>comment</p><p>Posted By: <span class="commenter">commenter</span></p></div>
-  var commentTemplate = document.getElementById("comment-template").innerHTML;
-  var templateFn = _.template(commentTemplate);
-  var commentsDiv = document.getElementById("comments");
-
-  //execute template function with JSON object for the interpolated values
-  var templateHTML = templateFn({ 'comment': comment, 'commenter': commenter });
-
-  //append rather than replace!
-  commentsDiv.innerHTML += templateHTML;
+  // var comments = document.getElementById("comments");
+  // var name = document.getElementById("commenter-name").value;
+  // var comment = document.getElementById("comment-body").value;
+  var commentTemplate = _.template(document.getElementById("comment-template").innerHTML);
+  // comments.innerHTML += commentTemplate({commentBody: comment, commenterName: name});
 }
